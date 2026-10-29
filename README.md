@@ -1,8 +1,7 @@
 # SCSE2103: Data Structures and Algorithms
 
-**Section:** 03
 **Academic Session/Semester:** 2026/2027/1  
-**Credit Hours:** 3  
+**Section:** 3  
 **Prerequisites:** SCSE1013, SCSE1224  
 **Faculty:** School of Computing, Faculty of Computing, Universiti Teknologi Malaysia
 
