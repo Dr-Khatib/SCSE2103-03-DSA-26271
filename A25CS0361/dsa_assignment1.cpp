@@ -63,7 +63,12 @@ public:
     // Otherwise, print an error message and return false.
     bool setGPA(float newGpa) {
         // TODO (TASK 2): Write the validation and assignment code here.
-        return false; // Replace this placeholder
+        if (newGpa >= 0.0f && newGpa <= 4.0f) {
+            gpa = newGpa;
+            return true;
+        }
+        cout << "Error: Invalid GPA! GPA must be between 0.0 and 4.0 (inclusive)." << endl;
+        return false;
     }
 };
 
