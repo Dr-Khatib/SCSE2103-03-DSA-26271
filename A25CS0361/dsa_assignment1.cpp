@@ -155,6 +155,16 @@ bool readRecordAt(const char* filename, int recordIndex, Student& outStudent) {
     // 3. inFile.read(reinterpret_cast<char*>(&outStudent), sizeof(Student));
     // 4. Return true if read succeeded, false otherwise.
 
+    streamoff offset = recordIndex * sizeof(Student);
+
+    inFile.seekg(offset, ios::beg);
+    inFile.read(reinterpret_cast<char*>(&outStudent), sizeof(Student));
+
+    if (inFile) {
+        inFile.close();
+        return true;
+    }
+    
     inFile.close();
     return false;
 }
