@@ -122,16 +122,16 @@ float calculateAverageGPA(const Student list[], int size) {
 // BUG DESCRIPTION: Missing binary flag and wrong stream output operator used instead of write().
 void saveToBinaryFile(const char* filename, const Student list[], int size) {
     // --- BUG HERE (TASK 5) ---
-    fstream outFile(filename, ios::out); 
+    fstream outFile(filename, ios::out | ios::binary); 
     if (!outFile) {
         cout << "Error opening file for writing!" << endl;
         return;
     }
 
     for (int i = 0; i < size; i++) {
-        
-         outFile << list[i]; 
-        
+
+        outFile.write(reinterpret_cast<const char*>(&list[i]), sizeof(Student));
+
     }
     outFile.close();
     cout << "Successfully saved records to binary file: " << filename << endl;
