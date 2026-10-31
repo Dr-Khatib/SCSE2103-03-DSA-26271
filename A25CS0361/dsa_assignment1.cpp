@@ -94,7 +94,7 @@ void displayUsingPointer(const Student* ptr) {
 void printAllStudents(const Student list[], int size) {
     cout << "\n--- Student Roster ---" << endl;
     // --- BUG HERE (TASK 3) ---
-    for (int i = 0; i <= size; i++) { 
+    for (int i = 0; i < size; i++) { 
         list[i].printStudent();
     }
 }
