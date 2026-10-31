@@ -106,8 +106,11 @@ float calculateAverageGPA(const Student list[], int size) {
     float totalGpa = 0.0f;
 
     // TODO (TASK 4): Write loop here to sum GPAs and calculate average.
+    for (int i = 0; i < size; i++) {
+        totalGpa += list[i].getGPA();
+    }
 
-    return 0.0f; // Replace with calculated average
+    return totalGpa / size; 
 }
 
 
