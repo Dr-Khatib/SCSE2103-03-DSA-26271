@@ -75,7 +75,7 @@ public:
 void displayUsingPointer(const Student* ptr) {
     if (ptr != nullptr) {
         // --- BUG HERE (TASK 1) ---
-        // ptr.printStudent(); // UNCOMMENT AND FIX THIS LINE 
+        ptr -> printStudent();  // same as (*ptr).printStudent();
     }
 }
 
