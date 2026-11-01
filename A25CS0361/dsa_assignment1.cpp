@@ -178,7 +178,10 @@ bool readRecordAt(const char* filename, int recordIndex, Student& outStudent) {
 // BUG DESCRIPTION: Infinite recursion due to missing base case and non-decreasing recursive step.
 int recursiveFactorial(int n) {
     // --- BUG HERE (TASK 7) ---
-    return n * recursiveFactorial(n); 
+    if (n == 0)
+    return 1; // Base case: 0! = 1
+
+    return n * recursiveFactorial(n-1); 
 }
 
 // TASK 8 [COMPLETE]: Recursive Linear Search for Student ID.
