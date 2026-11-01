@@ -180,7 +180,7 @@ int recursiveFactorial(int n) {
     // --- BUG HERE (TASK 7) ---
     if (n == 0)
     return 1; // Base case: 0! = 1
-
+    else
     return n * recursiveFactorial(n-1); 
 }
 
