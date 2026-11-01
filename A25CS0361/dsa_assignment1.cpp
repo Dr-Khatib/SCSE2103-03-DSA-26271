@@ -228,10 +228,13 @@ void analyzeLogarithmicEfficiency(int n) {
 
     // TODO (TASK 10): Implement while loop or for loop where i halves each step (i /= 2) until i <= 0.
     // Inside loop: stepCount++;
+    for (int i = n; i > 0; i = i / 2) {
+        stepCount++;
+    }
 
     cout << "Logarithmic Step Count for N=" << n << ": " << stepCount << " steps." << endl;
     // TODO (TASK 10 Comment): State the Big O complexity class of this algorithm below:
-    // Complexity: O(_________)
+    // Complexity: O(log2 N)
 }
 
 
