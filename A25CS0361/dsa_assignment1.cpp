@@ -191,8 +191,12 @@ int recursiveFactorial(int n) {
 // General Case: Recursively search next index (index + 1).
 int recursiveSearchID(const Student list[], int size, int targetID, int currentIndex = 0) {
     // TODO (TASK 8): Write base cases and recursive step here.
-
-    return -1; // Placeholder
+    if (currentIndex >= size)
+    return -1; // Not found
+    else if (list[currentIndex].getID() == targetID)
+    return currentIndex; // Found
+    else
+    return recursiveSearchID(list, size, targetID, currentIndex + 1); // General Case: Recursively search next index (index + 1)
 }
 
 
