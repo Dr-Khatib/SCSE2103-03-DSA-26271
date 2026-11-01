@@ -177,7 +177,7 @@ bool readRecordAt(const char* filename, int recordIndex, Student& outStudent) {
         return false;
     }
 
-    inFile.close();
+    inFile.close();  
     
     return true;
 }
